@@ -1,0 +1,21 @@
+// C++ code
+//
+int sec=5;
+int bright=51;
+
+void setup() {
+  pinMode(A0, OUTPUT);
+}
+
+void loop() {
+  for (int i = 0; i <= sec; i++) {
+    analogWrite(A0, bright);
+    delay(1000);              
+    bright += 51;            
+    if (bright > 255) {
+      bright = 255;          
+    }
+  }
+  analogWrite(A0, 0);        
+  delay(1000);              
+}
